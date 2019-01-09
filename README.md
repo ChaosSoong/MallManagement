@@ -1,88 +1,81 @@
-# vue-admin-template
+# mall-admin-web
 
-> A minimal vue admin template with Element UI & axios & iconfont & permission control & lint
+## 说明
 
-**Live demo:** http://panjiachen.github.io/vue-admin-template
+> 基于vue+element的电商后台管理系统，完整实现了整个流程。
 
-[中文文档](https://github.com/PanJiaChen/vue-admin-template/blob/master/README-zh.md)
+> 该项目为前后端分离项目，搭建步骤具体参考后端项目[传送门](https://github.com/macrozheng/mall)。
 
-## Build Setup
+> 如果该项目对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！
 
-```bash
-# Clone project
-git clone https://github.com/PanJiaChen/vue-admin-template.git
+> 或者您可以 "follow" 一下，该项目将持续更新，不断完善功能。
 
-# Install dependencies
-npm install
+> 项目交流QQ群：[959351312](http://qm.qq.com/cgi-bin/qm/qr?k=V6xu5c12j9qhnMUNdDRzakNxRKzOxibQ)。
 
-# Serve with hot reload at localhost:9528
-npm run dev
+> 如有问题或者好的建议可以在 Issues 中提。
 
-# Build for production with minification
-npm run build
+## 前言
 
-# Build for production and view the bundle analyzer report
-npm run build --report
+`mall`项目后台管理系统的前端项目
+[传送门](https://github.com/macrozheng/mall)。
+
+## 项目介绍
+
+`mall-admin-web`是一个电商后台管理系统的前端项目，基于Vue+Element实现。
+主要包括商品管理、订单管理、会员管理、促销管理、运营管理、内容管理、统计报表、财务管理、权限管理、设置等功能。
+
+## 项目演示
+
+项目在线演示地址：[www.macro.com/mall-admin/index.html](http://39.98.190.128/index.html)  
+
+![https://github.com/macrozheng/mall/blob/master/document/resource/mall-admin.gif](https://github.com/macrozheng/mall/blob/master/document/resource/mall-admin.gif)
+
+## 技术选型
+
+技术 | 说明 | 官网
+----|----|----
+Vue | 前端框架 | [https://vuejs.org/](https://vuejs.org/)
+Vue-router | 路由框架 | [https://router.vuejs.org/](https://router.vuejs.org/)
+Vuex | 全局状态管理框架 | [https://vuex.vuejs.org/](https://vuex.vuejs.org/)
+Element | 前端UI框架 | [https://element.eleme.io/](https://element.eleme.io/)
+Axios | 前端HTTP框架 | [https://github.com/axios/axios](https://github.com/axios/axios)
+v-charts | 基于Echarts的图表框架 | [https://v-charts.js.org/](https://v-charts.js.org/)
+Js-cookie | cookie管理工具 | [https://github.com/js-cookie/js-cookie](https://github.com/js-cookie/js-cookie)
+nprogress | 进度条控件 | [https://github.com/rstacruz/nprogress](https://github.com/rstacruz/nprogress)
+
+### 项目布局
+
+``` lua
+src -- 源码目录
+├── api -- axios网络请求定义
+├── assets -- 静态图片资源文件
+├── components -- 通用组件封装
+├── icons -- svg矢量图片文件
+├── router -- vue-router路由配置
+├── store -- vuex的状态管理
+├── styles -- 全局css样式
+├── utils -- 工具类
+└── views -- 前端页面
+    ├── home -- 首页
+    ├── layout -- 通用页面加载框架
+    ├── login -- 登录页
+    ├── oms -- 订单模块页面
+    ├── pms -- 商品模块页面
+    └── sms -- 营销模块页面
 ```
 
-## Demo
+## 搭建步骤
+- 下载node并安装：[https://nodejs.org/dist/v8.9.4/node-v8.9.4-x64.msi](https://nodejs.org/dist/v8.9.4/node-v8.9.4-x64.msi);
+- 该项目为前后端分离项目，访问本地访问接口需搭建后台环境，搭建请参考后端项目[传送门](https://github.com/macrozheng/mall);
+- 访问在线接口无需搭建后台环境，只需将config/dev.env.js文件中的BASE_API改为[http://39.98.190.128:8080](http://localhost:39.98.190.128:8080)即可;
+- 克隆源代码到本地，使用IDEA打开，并完成编译;
+- 在IDEA命令行中运行命令：npm install,下载相关依赖;
+- 在IDEA命令行中运行命令：npm run dev,运行项目;
+- 访问地址：[http://localhost:8090](http://localhost:8090) 即可打开后台管理系统页面;
+- 如果遇到无法运行该命令，需要配置npm的环境变量，如在path变量中添加：C:\Users\zhenghong\AppData\Roaming\npm。
 
-![demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/demo.gif)
+## 许可证
 
-## Extra
+[MIT](https://github.com/macrozheng/mall-admin-web/blob/master/LICENSE)
 
-If you want router permission && generate menu by user roles , you can use this branch [permission-control](https://github.com/PanJiaChen/vue-admin-template/tree/permission-control)
-
-This project is based on `webpack4` development. If you want to use `webpack3` development, please use this branch [webpack3](https://github.com/PanJiaChen/vue-admin-template/tree/webpack3)
-
-For `typescript` version, you can use [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template) (Credits: [@Armour](https://github.com/Armour))
-
-## Related Project
-
-[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
-
-[electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin)
-
-[vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)
-
-### Element-Ui using cdn tutorial
-
-First find `index.html`([root directory](https://github.com/PanJiaChen/vue-admin-template/blob/element-ui-cdn/index.html))
-
-Import css and js of `Element`, and then import vue. Because `Element` is vue-dependent, vue must be import before it.
-
-Then find [webpack.base.conf.js](https://github.com/PanJiaChen/vue-admin-template/blob/element-ui-cdn/build/webpack.base.conf.js)
-Add `externals` to make webpack not package vue and element.
-
-```
-externals: {
-  vue: 'Vue',
-  'element-ui':'ELEMENT'
-}
-```
-
-Finally there is a small detail to pay attention to that if you import vue in global, you don't need to manually `Vue.use(Vuex)`, it will be automatically mounted, see
-[issue](https://github.com/vuejs/vuex/issues/731)
-
-And you can use `npm run build --report` to see the effect
-
-Pictured:
-![demo](https://panjiachen.github.io/images/element-cdn.png)
-
-**[Detailed code](https://github.com/PanJiaChen/vue-admin-template/commit/746aff560932704ae821f82f10b8b2a9681d5177)**
-
-**[Branch](https://github.com/PanJiaChen/vue-admin-template/tree/element-ui-cdn)**
-
-## Browsers support
-
-Modern browsers and Internet Explorer 10+.
-
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| --------- | --------- | --------- | --------- |
-| IE10, IE11, Edge| last 2 versions| last 2 versions| last 2 versions
-
-## License
-
-[MIT](https://github.com/PanJiaChen/vue-admin-template/blob/master/LICENSE) license.
-
-Copyright (c) 2017-present PanJiaChen
+Copyright (c) 2018-2019 macrozheng

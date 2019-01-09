@@ -1,20 +1,20 @@
 <template>
   <el-menu class="navbar" mode="horizontal">
-    <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container"/>
-    <breadcrumb />
+    <hamburger class="hamburger-container" :toggleClick="toggleSideBar" :isActive="sidebar.opened"></hamburger>
+    <breadcrumb></breadcrumb>
     <el-dropdown class="avatar-container" trigger="click">
       <div class="avatar-wrapper">
-        <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
-        <i class="el-icon-caret-bottom"/>
+        <img class="user-avatar" :src="avatar">
+        <i class="el-icon-caret-bottom"></i>
       </div>
-      <el-dropdown-menu slot="dropdown" class="user-dropdown">
+      <el-dropdown-menu class="user-dropdown" slot="dropdown">
         <router-link class="inlineBlock" to="/">
           <el-dropdown-item>
-            Home
+            首页
           </el-dropdown-item>
         </router-link>
         <el-dropdown-item divided>
-          <span style="display:block;" @click="logout">LogOut</span>
+          <span @click="logout" style="display:block;">退出</span>
         </el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
@@ -76,7 +76,6 @@ export default {
       cursor: pointer;
       margin-top: 5px;
       position: relative;
-      line-height: initial;
       .user-avatar {
         width: 40px;
         height: 40px;
